@@ -1,0 +1,142 @@
+/* Installing the font families for the code */
+@font-face {
+    font-family: 'Monument';
+    src: url(./assets/fonts/MonumentExtended-Ultrabold.otf);
+}
+
+@font-face {
+    font-family: 'Gilroy';
+    src: url(./assets/fonts/Gilroy-Light.otf);
+}
+
+/* Installing the font families for the code */
+
+
+/* Boilerplate code */
+
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: 'Gilroy';
+}
+
+html, body{
+    height: 100%;
+    width: 100%;
+}
+
+/* Boilerplate code */
+
+
+/* Styles for remaining website */
+
+#main{
+    height: 100%;
+    width: 100%;
+    background-color: #F8F8F8;
+    padding-top: 1px;
+    
+}
+
+#nav{
+    height: 12vh;
+    width: 100%;
+    margin-top: 2vmax;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+}
+
+#nav h1{
+    font-size: 2.5vw;
+    height: 100%;
+    width: 25%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Monument';
+    letter-spacing: -2px;
+    font-weight: 900;
+    position: relative;
+}
+
+#nav h1:after{
+    position: absolute;
+    content: 'model management';
+    font-size: 0.8vw;
+    font-family: 'Gilroy';
+    color: rgb(143, 142, 142);
+    letter-spacing: -0.5px;
+    top: 65%;
+    left: 47%;
+}
+
+#nav h2{
+    font-size: 1.5vw;
+    height: 100%;
+    width: 20%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    border-right: 2px solid black;
+}
+
+
+#nav h2:nth-last-child(2){
+    width: 25%;
+}
+
+#nav h2:nth-last-child(1){
+    width: 10%;
+    border-right: none;
+}
+
+#nav h3{
+    display: none;
+}
+
+/* Styles for remaining website */
+
+/* Responsive Code */
+
+@media (max-width:600px) {
+    #nav{
+        height: 8vh;
+    }
+    #nav h2{
+        display: none;
+    }
+
+    #nav h1{
+        font-size: 4vw;
+    }
+
+    #nav h3{
+        display: initial;
+        font-size: 3vw;
+        height: 100%;
+        width: 20%;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #nav h1:after{
+        position: absolute;
+        content: 'model management';
+        font-size: 1.5vw;
+        font-family: 'Gilroy';
+        color: rgb(143, 142, 142);
+        letter-spacing: -0.5px;
+        top: 58%;
+        left: 45%;
+    }
+}
+
+/* Responsive Code */
+
+
+

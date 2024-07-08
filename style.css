@@ -98,6 +98,95 @@ html, body{
     display: none;
 }
 
+#center{
+    height: 80vh;
+    width: 100%;
+    padding: 5vh;
+    position: relative;
+}
+
+#content
+{
+    height: 75vh;
+    width: 100%;
+    position: relative;
+}
+
+#content video{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+#overlay{
+    /* background-color: red; */
+    position: absolute;
+    width: 100%;
+    top: 60%;
+    padding: 0px 3vw;
+}
+
+#top{
+    display: flex;
+    padding: 1vw 0vw;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#top h1{
+    font-family: 'Monument';
+    color: white;
+    font-size: 50px;
+    letter-spacing: 3px;
+}
+
+#circle-boundary{
+    background-color: transparent;
+    height: 100px;
+    width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: 2px solid white;
+}
+
+#circle-boundary p{
+    font-size: 20px;
+    font-family: 'Gilroy';
+    color: white;
+}
+
+#bottom{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1vw 0vw;
+}
+
+#bottom h3{
+    font-size: 20px;
+    letter-spacing: 0px;
+    color: white;
+}
+
+#bottom i{
+    color: white;
+    font-size: 30px;
+}
+
+#boundary{
+    display: block;
+    border: 1.5px solid white;
+}
+
+
+
+
+
+
+
 /* Styles for remaining website */
 
 /* Responsive Code */
@@ -134,9 +223,39 @@ html, body{
         top: 58%;
         left: 45%;
     }
+    #content
+{
+    height: 60vh;
+}
+
+    #overlay{
+        top: 70%;
+    }
+
+    #top{
+        padding: 3vh 0vh;
+    }
+
+    #top h1{
+        font-size: 20px;
+    }
+
+    #circle-boundary{
+        height: 50px;
+        width: 50px;
+    }
+
+    #circle-boundary p{
+        font-size: 13px;
+    }
+
+    #bottom h3{
+        font-size: 13px;
+    }
 }
 
 /* Responsive Code */
+
 
 
 

@@ -1,261 +1,457 @@
 /* Installing the font families for the code */
 @font-face {
-    font-family: 'Monument';
-    src: url(./assets/fonts/MonumentExtended-Ultrabold.otf);
+  font-family: "Monument";
+  src: url(./assets/fonts/MonumentExtended-Ultrabold.otf);
 }
 
 @font-face {
-    font-family: 'Gilroy';
-    src: url(./assets/fonts/Gilroy-Light.otf);
+  font-family: "Gilroy";
+  src: url(./assets/fonts/Gilroy-Light.otf);
 }
 
 /* Installing the font families for the code */
 
-
 /* Boilerplate code */
 
-*{
-    margin: 0%;
-    padding: 0%;
-    box-sizing: border-box;
-    font-family: 'Gilroy';
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+  font-family: "Gilroy";
 }
 
-html, body{
-    height: 100%;
-    width: 100%;
+html,
+body {
+  height: 100%;
+  width: 100%;
+  background-color: #f8f8f8;
 }
 
 /* Boilerplate code */
-
 
 /* Styles for remaining website */
 
-#main{
-    height: 100%;
-    width: 100%;
-    background-color: #F8F8F8;
-    padding-top: 1px;
-    
+#main {
+  height: 100%;
+  width: 100%;
+  background-color: #f8f8f8;
+  padding-top: 1px;
+  overflow-y: scroll;
+}
+#main::-webkit-scrollbar {
+  width: 7px;
+}
+#main::-webkit-scrollbar-track {
+  background: #f9f9f9ea;
+  border: 2px black solid;
+}
+#main::-webkit-scrollbar-thumb {
+  background: #000000af;
+  border-radius: 3px;
 }
 
-#nav{
-    height: 12vh;
-    width: 100%;
-    margin-top: 2vmax;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    border-top: 2px solid black;
-    border-bottom: 2px solid black;
+#nav {
+  height: 12vh;
+  width: 100%;
+  margin-top: 2vmax;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
 }
 
-#nav h1{
-    font-size: 2.5vw;
-    height: 100%;
-    width: 25%;
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    font-family: 'Monument';
-    letter-spacing: -2px;
-    font-weight: 900;
-    position: relative;
+#nav h1 {
+  font-size: 2.5vw;
+  height: 100%;
+  width: 25%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Monument";
+  letter-spacing: -2px;
+  font-weight: 900;
+  position: relative;
 }
 
-#nav h1:after{
-    position: absolute;
-    content: 'model management';
-    font-size: 0.8vw;
-    font-family: 'Gilroy';
-    color: rgb(143, 142, 142);
-    letter-spacing: -0.5px;
-    top: 65%;
-    left: 47%;
+#nav h1:after {
+  position: absolute;
+  content: "model management";
+  font-size: 0.8vw;
+  font-family: "Gilroy";
+  color: rgb(143, 142, 142);
+  letter-spacing: -0.5px;
+  top: 65%;
+  left: 47%;
 }
 
-#nav h2{
-    font-size: 1.5vw;
+#nav h2 {
+  font-size: 1.5vw;
+  height: 100%;
+  width: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-right: 2px solid black;
+}
+
+#nav h2:nth-last-child(2) {
+  width: 25%;
+}
+
+#nav h2:nth-last-child(1) {
+  width: 10%;
+  border-right: none;
+}
+
+#nav h3 {
+  display: none;
+}
+
+#center {
+  height: 80vh;
+  width: 100%;
+  padding: 5vh;
+  position: relative;
+  margin-bottom: 5vh;
+}
+
+#content {
+  height: 75vh;
+  width: 100%;
+  position: relative;
+}
+
+#content video {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+#overlay {
+  /* background-color: red; */
+  position: absolute;
+  width: 100%;
+  top: 60%;
+  padding: 0px 3vw;
+  background-color: rgba(0, 0, 0, 0.193);
+  backdrop-filter: blur(10px);
+}
+
+#top {
+  display: flex;
+  padding: 1vw 0vw;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#top h1 {
+  font-family: "Monument";
+  color: white;
+  font-size: 50px;
+  letter-spacing: 3px;
+}
+
+#circle-boundary {
+  background-color: transparent;
+  height: 100px;
+  width: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: 2px solid white;
+}
+
+#circle-boundary p {
+  font-size: 20px;
+  font-family: "Gilroy";
+  color: white;
+}
+
+#bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1vw 0vw;
+}
+
+#bottom h3 {
+  font-size: 20px;
+  letter-spacing: 0px;
+  color: white;
+}
+
+#bottom i {
+  color: white;
+  font-size: 30px;
+}
+
+#boundary {
+  display: block;
+  border: 1.5px solid white;
+}
+
+#scroller {
+  height: 30vh;
+  width: 100%;
+  /* background-color: red; */
+  padding: 2vw 0vw;
+  display: flex;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  gap: 2vw;
+}
+
+#scroll-container {
+  height: 20vh;
+  width: 100%;
+  gap: 2vw;
+  /* background-color: black; */
+  display: flex;
+  animation: marquee-animation;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.actor {
+  flex-shrink: 0;
+  height: 21vh;
+  width: 10.1vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1vh;
+}
+
+.actor img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 50%;
+}
+
+.actor p {
+  font-size: 0.8vw;
+  font-weight: 800;
+}
+
+#alphabet {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2vh;
+  height: 10vh;
+  width: 100%;
+  border-top: 1px black solid;
+  border-bottom: 1px black solid;
+}
+
+#alphabet h5 {
+  font-size: 1.2vw;
+  font-style: italic;
+  border-bottom: 1px black solid;
+  margin-right: 1.5vw;
+  font-weight: 200;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+}
+
+#alphabet h6 {
+  font-size: 0.9vw;
+  font-style: italic;
+  height: 3vh;
+  width: 1.5vw;
+  padding: 1.2vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  transition: all 0.2s ease-in-out;
+  border: 1px solid rgba(0, 0, 0, 0);
+}
+
+#alphabet h6:hover {
+  border: 1px solid rgba(0, 0, 0);
+}
+
+#page2 {
+  height: 100%;
+  width: 100%;
+}
+
+/* Styles for remaining website */
+
+/* Responsive Code */
+
+@media (max-width: 600px) {
+  #nav {
+    height: 8vh;
+  }
+  #nav h2 {
+    display: none;
+  }
+
+  #nav h1 {
+    font-size: 4vw;
+  }
+
+  #nav h3 {
+    display: initial;
+    font-size: 3vw;
     height: 100%;
     width: 20%;
-    display:flex;
+    display: flex;
     justify-content: center;
     align-items: center;
-    border-right: 2px solid black;
-}
+  }
 
+  #nav h1:after {
+    position: absolute;
+    content: "model management";
+    font-size: 1.5vw;
+    font-family: "Gilroy";
+    color: rgb(143, 142, 142);
+    letter-spacing: -0.5px;
+    top: 58%;
+    left: 45%;
+  }
+  #content {
+    height: 55vh;
+  }
 
-#nav h2:nth-last-child(2){
-    width: 25%;
-}
+  #overlay {
+    top: 70%;
+  }
 
-#nav h2:nth-last-child(1){
-    width: 10%;
-    border-right: none;
-}
+  #top {
+    padding: 3vh 0vh;
+  }
 
-#nav h3{
-    display: none;
-}
+  #top h1 {
+    font-size: 20px;
+  }
 
-#center{
-    height: 80vh;
+  #circle-boundary {
+    height: 50px;
+    width: 50px;
+  }
+
+  #circle-boundary p {
+    font-size: 13px;
+  }
+
+  #bottom h3 {
+    font-size: 13px;
+  }
+
+  #center{
+    margin-bottom: 50px;
+    /* padding: -20px 3vh; */
+    height:60vh;
+  }
+
+  #scroller{
+    height: 8vh;
     width: 100%;
-    padding: 5vh;
-    position: relative;
+    /* background-color: red; */
+    padding: 2vw 0vw;
+    display: flex;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    gap: 2vw;
+    /* background-color: red; */
 }
 
-#content
-{
-    height: 75vh;
+#scroll-container{
+    height: 20vh;
     width: 100%;
-    position: relative;
+    gap: 2vw;
+    /* background-color: black; */
+    display: flex;
+    animation: marquee-animation;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
 }
 
-#content video{
+
+
+.actor{
+    flex-shrink: 0;
+    height: 5vh;
+    width: 10vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1vh;
+}
+
+.actor img{
     height: 100%;
     width: 100%;
     object-fit: cover;
     object-position: center;
-}
-
-#overlay{
-    /* background-color: red; */
-    position: absolute;
-    width: 100%;
-    top: 60%;
-    padding: 0px 3vw;
-}
-
-#top{
-    display: flex;
-    padding: 1vw 0vw;
-    align-items: center;
-    justify-content: space-between;
-}
-
-#top h1{
-    font-family: 'Monument';
-    color: white;
-    font-size: 50px;
-    letter-spacing: 3px;
-}
-
-#circle-boundary{
-    background-color: transparent;
-    height: 100px;
-    width: 100px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     border-radius: 50%;
-    border: 2px solid white;
 }
 
-#circle-boundary p{
-    font-size: 20px;
-    font-family: 'Gilroy';
-    color: white;
+.actor p{
+    font-size: 0.8vw;
+    font-weight: 800;
 }
 
-#bottom{
+#alphabet{
     display: flex;
+    justify-content: center;
     align-items: center;
-    justify-content: space-between;
-    padding: 1vw 0vw;
+    gap: .2vw;
+    height: 2vh;
+    width: 100%;
+    border-top: 1px black solid; 
+    border-bottom: 1px black solid; 
+
 }
 
-#bottom h3{
-    font-size: 20px;
-    letter-spacing: 0px;
-    color: white;
+#alphabet h5{
+    font-size: 1.2vw;
+    font-style: italic;
+    border-bottom: 1px black solid  ;
+    margin-right: 1.5vw;
+    font-weight: 200;
+    text-transform: uppercase;
+    letter-spacing: 4px;
 }
 
-#bottom i{
-    color: white;
-    font-size: 30px;
+#alphabet h6{
+    font-size: 0.9vw;
+    font-style: italic;
+    height: 0.5vh;
+    padding: 1.2vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    transition: all 0.2s ease-in-out;
+    border: 1px solid rgba(0, 0, 0, 0);
 }
 
-#boundary{
-    display: block;
-    border: 1.5px solid white;
+#alphabet h6:hover{
+    border: 1px solid rgba(0, 0, 0);
 }
-
-
-
-
-
-
-
-/* Styles for remaining website */
-
-/* Responsive Code */
-
-@media (max-width:600px) {
-    #nav{
-        height: 8vh;
-    }
-    #nav h2{
-        display: none;
-    }
-
-    #nav h1{
-        font-size: 4vw;
-    }
-
-    #nav h3{
-        display: initial;
-        font-size: 3vw;
-        height: 100%;
-        width: 20%;
-        display:flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    #nav h1:after{
-        position: absolute;
-        content: 'model management';
-        font-size: 1.5vw;
-        font-family: 'Gilroy';
-        color: rgb(143, 142, 142);
-        letter-spacing: -0.5px;
-        top: 58%;
-        left: 45%;
-    }
-    #content
-{
-    height: 60vh;
-}
-
-    #overlay{
-        top: 70%;
-    }
-
-    #top{
-        padding: 3vh 0vh;
-    }
-
-    #top h1{
-        font-size: 20px;
-    }
-
-    #circle-boundary{
-        height: 50px;
-        width: 50px;
-    }
-
-    #circle-boundary p{
-        font-size: 13px;
-    }
-
-    #bottom h3{
-        font-size: 13px;
-    }
 }
 
 /* Responsive Code */
 
-
-
-
+@keyframes marquee-animation {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(calc(-100% - 2vw));
+  }
+}

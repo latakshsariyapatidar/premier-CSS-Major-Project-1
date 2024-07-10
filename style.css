@@ -93,6 +93,13 @@ body {
   justify-content: center;
   align-items: center;
   border-right: 2px solid black;
+  background-color: #d6d6d600;
+  transition: all 0.2s linear;
+}
+
+#nav h2:hover{
+  background-color: #d6d6d6;
+
 }
 
 #nav h2:nth-last-child(2) {
@@ -133,11 +140,23 @@ body {
   /* background-color: red; */
   position: absolute;
   width: 100%;
-  top: 60%;
+  top: 0%;
+  height: 100%;
   padding: 0px 3vw;
-  background-color: rgba(0, 0, 0, 0.193);
+  background-color: rgba(0, 0, 0, 0);
+  backdrop-filter: blur(0px);
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  padding-bottom: 5vh;
+  transition: all 0.4s ease-in;
+}
+
+#overlay:hover{
+  background-color: rgba(0, 0, 0, 0.459);
   backdrop-filter: blur(10px);
 }
+
 
 #top {
   display: flex;
@@ -151,7 +170,9 @@ body {
   color: white;
   font-size: 50px;
   letter-spacing: 3px;
+  width: fit-content;
 }
+
 
 #circle-boundary {
   background-color: transparent;
@@ -335,8 +356,318 @@ body {
   font-weight: 100;
 }
 
+#vogue-text{
+  height: 10vh;
+  padding: 1vw 2vw;
+}
+
+#vogue-text h2{
+  font-family: Monument;
+  text-align: left;
+  font-size: 2.2vw;
+  text-transform: uppercase;
+}
+
+#page3{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  padding: 2vw;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+#page3-part1{
+  height: 100%;
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#page3-part1 h5{
+  height: 15vh;
+  font-size: 1.5vw;
+}
+
+#page3-part2{
+  height: 100%;
+  width: 50%;
+}
+
+#page3-part2 img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: bottom;
+  border-radius: 20px;
+}
 
 
+#page3-part1-centertext-container{
+  height: 50%;
+  width: 100%;
+  position: relative;
+}
+
+#page3-part1-centertext-container:hover i{
+  transform: translateX(10%);
+}
+
+#page3-part1-centertext-container img{
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+  margin-top: 10vh;
+}
+
+#page3-part1-centertext-container i{
+  font-size: 70px;
+  color: white;
+  position: absolute;
+  top: 62%;
+  transition: transform 50ms ease-in-out;
+
+  left: 44%;
+}
+
+#page4{
+  height: 100%;
+  width: 100%;
+  padding: 7vh 8vw;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#page4 img{
+  height:100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+  transform: rotate(0deg);
+  transition: transform 300ms ease-in-out;
+}
+
+#updates{
+  width: 100%;
+  padding: 2vw;
+  margin-bottom: 10vh;
+}
+
+#updates>h1{
+  font-family: Monument;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 7vh;
+}
+
+.elem{
+  height: 12vh;
+  width: 100%;
+  border-top: 2px solid #000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0vw 4vw;
+}
+
+.elem:nth-last-child(1){
+  border-bottom: 2px solid #000;
+}
+
+.elem h4{
+  width: 20%;
+  font-size: 1.2vw;
+}
+
+.elem-text-container{
+  width: 40%;
+}
+
+.elem-text-container h5{
+  text-transform: uppercase;
+}
+
+#marque-text{
+  margin-top: 5vw;
+  white-space: nowrap;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+  padding: 1vw 0;
+
+}
+
+#marque-text h1{
+  display: inline-block;
+  font-family: Monument;
+  -webkit-text-stroke: 1px #000;
+  color: transparent;
+  font-size: 3vw;
+  letter-spacing: 3px;
+  margin-right: 16px;
+  animation-name: marquee-animation-1;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+#blog{
+  height: 100%;
+  width: 100%;
+  /* background-color: red; */
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 2vw;
+  margin-top: 10vh;
+  margin-bottom: 20vh;
+}
+
+#blog1{
+  height: 100%;
+  width: 20%;
+  /* background-color: blue; */
+}
+#blog1 h1{
+  font-family: Monument;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 7vh;
+}
+
+
+#blog2{
+  height: 100%;
+  width: 30%;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: space-between;
+}
+
+#blog2 img{
+
+  height: 60%;
+  width: 100%;
+  object-fit: cover;
+  object-position: top;
+}
+
+#blog3 img{
+
+  height: 60%;
+  width: 100%;
+  object-fit: cover;
+}
+#blog3 h4{
+  font-size: 1.4vw;
+  text-align: justify;
+}
+#blog2 h4{
+  font-size: 1.4vw;
+  text-align: justify;
+
+}
+
+
+#blog3{
+  height: 100%;
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#footer{
+  width: 100%;
+  height: 40%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+}
+
+#footer h1{
+  font-size: 2.5vw;
+  height: 100%;
+  width: 25%;
+  display: flex;
+  justify-content: center;
+  align-items:flex-start;
+  font-family: "Monument";
+  letter-spacing: -2px;
+  font-weight: 900;
+  position: relative;
+  padding: 2vw 0vw;
+}
+
+#footer-container{
+
+  height: 100%;
+  width: 70%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#footer-container h4{
+  text-align: center;
+  height: 100%;
+  border-right: 2px solid black;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  width: 26%;
+  font-size: 1.3vw;
+  padding: 2vw 0vw;
+}
+
+#footer-inner-container{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-between;
+  padding: 0vw 0vw;
+  width: 50%;
+}
+
+#footer-inner-container>h3{
+  width: 100%;
+  border-bottom: 2px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 30%;
+}
+
+#others-container{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  height: 70%;
+  padding: 2vw;
+}
+#SocialMediaContainer{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 50%;
+}
+#copyrightContainer h3{
+  font-size: 1vw;
+}
+
+#endgame{
+  height: 30%;
+  width: 100%;
+}
 /* Styles for remaining website */
 
 /* Responsive Code */
@@ -506,5 +837,14 @@ body {
   }
   to {
     transform: translateX(calc(-100% - 2vw));
+  }
+}
+
+@keyframes marquee-animation-1 {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(calc(-100% - 20px));
   }
 }
